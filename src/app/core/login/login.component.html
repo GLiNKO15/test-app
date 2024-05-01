@@ -1,9 +1,9 @@
 <form>
-  <input type="text" [formControl]="input">
-  <button (click)="onSubmit()" [disabled]='isLoading'>Отправить</button>
+  <input type="text" [formControl]="input" />
+  <button (click)="onSubmit()" [disabled]="isLoading">Отправить</button>
 </form>
 
 <div *ngIf="(user$ | async) && isError">
-    {{ user$ | async }}
+  {{ user$ | async }}
 </div>
 <h2>{{ vmTimer }}</h2>
